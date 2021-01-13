@@ -14,6 +14,7 @@ class ProductCollection extends JsonResource
      */
     public function toArray($request)
     {
+        //transforming data yang bakal diliat user tentang product secara keseluruhan
         return [
             'name'=>$this->name,
             'totalPrice'=>round((1-($this->discount/100)) * $this->price,2),

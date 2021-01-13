@@ -14,6 +14,8 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
+
+        //transforming data yang akan dilihat user tentang  product secara spesifik ../api/products/{id product}
         return [
             'name'=>$this->name,
             'description'=>$this->detail,
