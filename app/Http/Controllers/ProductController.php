@@ -89,7 +89,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $request['detail'] = $request->detail;
+        
+        $product->update($request->all());
     }
 
     /**
